@@ -1,0 +1,48 @@
+
+server:
+  port: 8080
+spring:
+  datasource:
+    #      // ??? datasource
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:oracle:thin:@192.168.111.132:1521:DB19
+    username: aki
+    password: 111111
+
+  #    driver-class-name: oracle.jdbc.driver.OracleDriver - 9?? ??? ?? ???
+
+  #    // ??? .end
+  #    #   // ??? .end
+  #    #   // ??? dataSource
+  #    driver-class-name: oracle.jdbc.OracleDriver
+  #    #    url: jdbc:oracle:thin:@db202109281822_high?TNS_ADMIN=/var/lib/tomcat9/OracleCloud
+  #    url: jdbc:oracle:thin:@db202109281822_high?TNS_ADMIN=./src/main/resources/OracleCloud
+  #    #    url: jdbc:oracle:thin:@db202109281822_high?TNS_ADMIN=C:\\akinux\\??\\goosinsa\\src\\main\\resources\\OracleCloud
+  #    username: admin
+
+  #    password: '@Velpare1004'
+  #    url: jdbc:oracle:thin:@localhost:1521/orcl
+
+
+  #    driver-class-name: oracle.jdbc.OracleDriver
+
+  messages:
+    basename: errors
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: true
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: info
+  org.hibernate.type: info
+
+#  thymeleaf:
+#    prefix: classpath:/templates/
+#    suffix: .html
+
+
